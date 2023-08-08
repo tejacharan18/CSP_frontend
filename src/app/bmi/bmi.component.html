@@ -1,0 +1,48 @@
+
+<div class="container">
+  <p>
+  <b>BMI</b> (Body Mass Index) is an important metric used in healthcare and nutrition fields to assess an individual's 
+  body weight relative to their height. 
+  While it has its limitations, BMI provides valuable information that can be used in various ways : Monitoring Weight Loss or Gain ,Nutritional Guidance,Health Indicator
+  </p>
+   <div class="card">
+    <div class="container">
+      <div class="row">
+      <div class="col-4">
+    <h2>BMI CALCULATOR</h2>
+    <form>
+        <div class="row">
+          
+            <div class="col-md-4 mb-4">
+
+              <div class="form-outline">
+                <label>WEIGHT :</label>
+                <input type="text" placeholder="ENTER YOUR WEIGHT" name="weight"   [(ngModel)]="bmi.weight" class="form-control form-control-lg" />
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="form-outline">
+                <label>HEIGHT :</label>
+
+                <input type="text" id="form3Example1n1" placeholder="ENTER YOUR HEIGHT" name="height"  [(ngModel)]="bmi.height" class="form-control form-control-lg" />
+              </div>
+            </div>
+          </div>
+          <button class=" btn btn-success" value="submit" type="submit" (click)="bmical()">Submit</button>&nbsp;
+          <input type="reset" class="btn btn-danger" >
+    </form>
+    <div class="div" *ngIf="show">
+Your BMI  is {{bmivalue | number:'1.1-1'}}
+<br>
+You are {{status}}
+
+    </div>
+
+    </div>
+    
+    <div class="col-8">
+  <img src="assets\images\bmi.jpg">
+</div></div>
+

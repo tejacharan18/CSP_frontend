@@ -1,0 +1,144 @@
+.navbar-brand{
+    color:white;
+    font-size: 20px;
+  }
+  .nav-link{
+    color:white;
+  border-radius: 10px;
+  font-size: 15px;
+  
+  }
+  .user{
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    text-decoration:none;
+  }
+  .nav-link:hover{
+  color:black;
+  background-color: white;
+  border-radius: 10px;
+  }
+  .nav-link:focus{
+    color:black;
+  background-color: white;
+  border-radius: 10px;
+  }
+  
+  /* p{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .marque{
+    font-size:10px;
+    color:white;
+    background-color:rgb(7, 92, 45) ;
+  } */
+  .dropdown:hover > .dropdown-menu{
+    display: block;
+    margin-top: .120em;
+  }
+  .drop-item{
+    margin-top:1px;
+  }
+  img{
+    width: 200px;
+    height: 70px;
+  }
+  ul li{
+    margin-left: 25px;
+  }
+  .nav-link{
+    cursor: pointer;
+    text-decoration:none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .home img{
+    width:100%;
+    height:600px;
+  
+  }
+  
+  .top-right {
+    position: absolute;
+    top: 200px;
+    right: 160px;
+  }
+  .top-right h1{
+    font-size: 70px;
+  color:rgb(3, 25, 29);
+  font-family:Verdana, Geneva, Tahoma, sans-serif  ;
+  }
+  .top-right p{
+    font-size:18px;
+  }
+  button{
+    border:1 px black solid;
+  }
+  input{
+    background-color: transparent;
+    border: 2px black solid ;
+    width:30%;
+    height:40px;
+    border-radius: 20px;
+    margin-top:80px;
+    
+  }
+  input:hover{
+    background-color: white;
+    color:rgb(88, 84, 84);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    border:2px white solid;
+  }
+  .home{
+    margin-top: -100px;
+  }
+  
+  
+  /* footer */
+  footer{
+    background-color: rgb(34, 31, 31);
+    color:rgb(135, 127, 127);
+  }
+  .menu a{
+    padding:40px;
+    margin-top: 40px;
+    font-size: 20px;
+  }
+  .menu a:hover{
+    cursor:pointer;
+  }
+  .menu{
+    margin-top: 40px;
+  }
+  .footer-heading{
+    text-decoration: none;
+    margin-top: 100px;
+  }
+  .footer-heading a:hover{
+    text-decoration: none;
+  }
+  .footer-heading{
+    text-decoration: none;
+  
+  }
+

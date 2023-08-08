@@ -1,0 +1,47 @@
+<div *ngIf="canshow">
+<div class="logo"><img src="assets\images\nec.png"></div>
+<div class="dept">
+  <h3>DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING </h3>
+</div>
+<div class="page">
+  <h2>A COMMUNITY SERVICE PROJECT - HEALTH SAVIOUR</h2>
+</div>
+<div class="logoo"><img src="assets\images\logo1.png"></div>
+<div class="but">
+  <input type="submit" value="sign in" class="signin btn btn-success my-2" (click)="popup2()">
+  <input type="submit" value="sign up" class="btn signin btn-success my-2" (click)="popup3()">
+</div>
+</div>
+<div *ngIf="register"> 
+  <div class="wrapper">   
+                <div class="overlay" *ngIf="show1">
+                    <div class="content" (click)="closeoverlay($event)">
+                        <div class="close" (click)="closepopup()">
+                            &times;
+                        </div>
+                       <h3>REGISTER AS</h3>
+                        <div class="confirm">
+                        <button class="confirm btn btn-danger" routerLink="patient"   (click)="pop()">PATIENT</button>
+                        <button class="confirm btn btn-primary " routerLink="doctor" (click)="pop()" >DOCTOR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div *ngIf="Canshow">
+  <div class="wrapper">   
+                <div class="overlay" *ngIf="show">
+                    <div class="content" (click)="closeoverlay($event)">
+                        <div class="close" (click)="closepopup()">
+                            &times;
+                        </div>
+                       <h3>LOGIN AS</h3>
+                        <div class="confirm">
+                        <button class="confirm btn btn-danger "type="submit" routerLink="patientlogin"  (click)="pop()">PATIENT</button>
+                        <button class="confirm btn btn-primary "  routerLink="doctorlogin" (click)="pop()">DOCTOR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div *ngIf="test"><router-outlet></router-outlet></div>

@@ -1,0 +1,22 @@
+    <div class="wrapper">
+    <div class="logo">
+        <img src="assets\images\logo.png" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+       <h2>DOCTOR LOGIN</h2>
+    </div><br>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="doct_email" id="userName" placeholder="Username" [(ngModel)]="Doctor.doct_email">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="licence_num" id="pwd" placeholder="Password" [(ngModel)]="Doctor.licence_num">
+        </div>
+        <button class="btn mt-3" (click)="Read()">Login</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+    </div>
+</div>

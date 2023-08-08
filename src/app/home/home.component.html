@@ -1,0 +1,126 @@
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid p-3 bg-success">
+    <img src="assets\images\Screenshot_2023-07-01_194229-transformed.png"><a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav  mb-2 mb-lg-0">
+        
+          <li class="nav-item">
+              <a class="nav-link " active routerLink="homepage" (click)="readmo()">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="dieseasepred" (click)="stop()">DIESEASE PREDICTOR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="bmi" (click)="stop()">BMI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="medical" (click)="stop()">MEDICINES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " routerLink="about" (click)="stop()">About US</a>
+            </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" routerLink="medicine" (click)="stop()">INSERT</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="update" (click)="stop()">UPDATE</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="delete" (click)="stop()">DELETE</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="read" (click)="stop()">ENQUIRY</a></li>
+          </ul>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="contact" (click)="stop()">CONTACT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="diet" (click)="stop()">QR code</a>
+      </li>
+ <li class="nav-item user">
+    <a class=" user"> welcome {{username}} !</a>
+  </li>
+        <li><button class="btn mt-3 bg-warning" (click)="logout()">Login Out</button></li>
+       
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div *ngIf="home">
+<div class="home">
+  <img src="assets\images\home-transformed.webp" >
+ 
+  <div class="top-right"><h1>HEALTH SAVIOUR</h1><br>
+  <p>Have A Proper Guidance for Your HEALTH<br>
+  Make your self healthy and strong with Health Saviour
+  </p>
+<input type="button" value="Read More" (click)="readmoree()">
+</div>
+ 
+</div>
+
+
+<footer class="footer-07">
+  <div class="container">
+  <div class="row justify-content-center">
+  <div class="col-md-12 text-center">
+  <h2 class="footer-heading"><a href="#" class="logo">HealthSaviour.com</a></h2>
+  <p class="menu">
+  <a >Home</a>
+  <a >Medicines</a>
+  <a >Predictor</a>
+  <a >About</a>
+    <a >Contact</a>
+  </p>
+  
+  </div>
+  </div>
+  <div class="row mt-5">
+  <div class="col-md-12 text-center">
+  <p class="copyright">
+  Copyright &copy; 2023 All rights reserved | This website belongs <i class="ion-ios-heart" aria-hidden="true"></i> to <a href="https://colorlib.com" target="_blank">HealthSaviour.com</a>
+  </p>
+  </div>
+  </div>
+  </div>
+  </footer>
+</div>
+<div *ngIf="route">
+<router-outlet></router-outlet>
+</div>
+<div *ngIf="readmore">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <p>Good health ensures that the body's systems function optimally, allowing individuals to lead active,
+          productive, and fulfilling lives. 
+         It enables people to engage in daily activities, work, and enjoy leisure activities.
+         Physical health is closely connected to mental and emotional well-being. Being in good health can positively impact mental health, 
+         reducing the risk of conditions like depression, anxiety, and stress-related disorders
+         </p>
+      </div>
+      <div class="col-4">
+        <img src="assets\images\helathy.png">
+      </div>
+    </div>
+  </div>
+  <!-- <div class="healthy">
+    <p>Good health ensures that the body's systems function optimally, allowing individuals to lead active,
+       productive, and fulfilling lives. 
+      It enables people to engage in daily activities, work, and enjoy leisure activities.
+      <img src="assets\images\helathy.png"></p>
+  
+  </div> -->
+</div>
+<!-- <div class="marque">
+<marquee><p>HEALTH SAVIOUR</p></marquee>
+</div> -->
+
+
+

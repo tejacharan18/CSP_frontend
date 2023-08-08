@@ -1,0 +1,230 @@
+<div class="getall">
+    <button type="submit" value="readall" (click)="read()" class="btn1">GET ALL</button>
+    </div>
+    
+    <div *ngIf="tablepop">
+    <section class="intro">
+                <div class="bg-image h-100" style="background-color: #f5f7fa;">
+                  <div class="mask d-flex align-items-center h-100">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-12">
+                            <h1 class="pi">Patient Information</h1>
+    
+                          <div class="card">
+                            <div class="card-body p-0">
+                              <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px">
+                                <table class="table table-striped mb-0">
+                                  <thead style="background-color: #002d72; color:white">
+                                    <tr>
+                                        
+                                        <th>PATIENT NAME</th>
+                                        <th>AGE</th>
+                                        <th>EMAIL</th>
+                                        <th>PHONE NO</th>
+                                        <th>HEIGHT</th>
+                                        <th>WEIGHT</th>
+                                        <th>BLOOD GROUP</th>
+                                        <th>HEALTH ISSUES</th>
+                                        <th>UPDATE</th>
+                                        <th>READ</th>
+                                        <th>DELETE</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr  *ngFor="let i of res">
+                                        <td>{{i[0]}}</td>
+                                        <td>{{i[1]}}</td>
+                                        <td>{{i[2]}}</td>
+                                        <td>{{i[3]}}</td>
+                                        <td>{{i[4]}}</td>
+                                        <td>{{i[5]}}</td>
+                                        <td>{{i[6]}}</td>
+                                        <td>{{i[7]}}</td>
+                                        <td><button class="btn btn-primary btn2" (click)="read2(i[2])">Update</button></td>
+                                        <td><button class="btn btn-primary btn3" (click)="read1(i[2])">Read</button></td>
+                                        <td><button class="btn btn-danger btn4" (click)="Delete(i[2])">Delete</button></td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+<div *ngIf="canshow">
+    <div class="wrapper">   
+        <div class="overlay" *ngIf="show">
+            <div class="content" (click)="closeoverlay($event)">
+                 <div class="close" (click)="closepopup()">
+                     &times;
+                 </div>
+                 <table >
+                    <tr>
+                      <th colspan="10" style="text-align: center;"><h4>PATIENT DETAILS</h4></th>
+                    </tr>
+                    <tr>
+                      <td colspan="4"> NAME</td>
+                      <td colspan="6" class="info">{{sample.patient_name}}</td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">AGE</td>
+                      <td colspan="6" class="info">{{sample.age}}</td>
+                    </tr> <tr>
+                      <td colspan="4">EMAIL</td>
+                      <td colspan="6" class="info">{{sample.email}}</td>
+                    </tr> <tr>
+                      <td colspan="4">PHONE NUMBER </td>
+                      <td colspan="6" class="info">{{sample.phone_no}}</td>
+                    </tr> <tr>
+                      <td colspan="4">HEIGHT </td>
+                      <td colspan="6" class="info">{{sample.height}}</td>
+                    </tr> <tr>
+                      <td colspan="4">WEIGHT</td>
+                      <td colspan="6" class="info">{{sample.weight}}</td>
+                    </tr> <tr>
+                      <td colspan="4">BLOOD GROUP</td>
+                      <td colspan="6" class="info">{{sample.blood_group}}</td>
+                    </tr>  <tr>
+                      <td colspan="4">HEALTH ISSUES</td>
+                      <td colspan="6" class="info">{{sample.previous_health_issues}} years</td>
+                    </tr> <tr>
+                      <td colspan="4">DISABILITY</td>
+                      <td colspan="6" class="info">{{sample.disability}}</td>
+                    </tr> 
+                    <tr>
+                        <td colspan="4">DIABETIC</td>
+                        <td colspan="6" class="info">{{sample.diabetic}}</td>
+                      </tr> 
+                      <tr>
+                        <td colspan="4">ADDRESS</td>
+                        <td colspan="6" class="info">{{sample.address}}</td>
+                      </tr>
+                      <tr>
+                       <img [src]="sample.img" width="100px" height="100px">
+                      </tr>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="updat">
+    <div class="wrapper">   
+        <div class="overlay" *ngIf="show1">
+            <div class="content1" (click)="closeoverlay1($event)">
+                 <div class="close" (click)="closepopup1()">
+                     &times;
+                 </div>
+                 <form #r="ngForm"  >
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                              <label>NAME</label>
+                            <input type="text" id="form3Example1m1" name="patient_name" [(ngModel)]="sample.patient_name" class="form-control form-control-lg" />
+                              </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                              <label>EMAIL</label>
+                            <input type="email" id="form3Example1n1"  name="email" [(ngModel)]="sample.email" class="form-control form-control-lg" />
+                          </div>
+                        </div>
+                      </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label>AGE</label>
+                          <input type="text" id="form3Example1m1" name="age" [(ngModel)]="sample.age" class="form-control form-control-lg" />
+                            </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label>PHONE NUMBER</label>
+                          <input type="text" id="form3Example1n1"  name="phone_no" [(ngModel)]="sample.phone_no" class="form-control form-control-lg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label>HEIGHT</label>
+                          <input type="email" id="form3Example1m1" name="height" [(ngModel)]="sample.height" class="form-control form-control-lg" />
+                            </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label>WEIGHT</label>
+                          <input type="text" id="form3Example1n1"  name="weight" [(ngModel)]="sample.weight" class="form-control form-control-lg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label>BLOOD GROUP</label>
+                          <input type="email" id="form3Example1m1"  name="blood_group" [(ngModel)]="sample.blood_group" class="form-control form-control-lg" />
+                            </div>
+                      </div>
+                      <div class="col-md-6 mb-4">
+                        <div class="form-outline">
+                            <label>PREVIOUS HEALTH ISSSUES</label>
+                          <input type="text" id="form3Example1n1" name="previous_health_issues" [(ngModel)]="sample.previous_health_issues" class="form-control form-control-lg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                      <h5 class="mb-0 me-4">DISABILITY: </h5>
+    
+                      <div class="form-check form-check-inline mt-4 mb-0 me-4">
+                        <input class="form-check-input" type="radio" [(ngModel)]="sample.disability" name="disability" id="yesdis"
+                          value="yes" />
+                        <label class="form-check-label" for="yesdis">YES</label>
+                      </div>
+    
+                      <div class="form-check form-check-inline mt-4 mb-0 me-4">
+                        <input class="form-check-input" type="radio" [(ngModel)]="sample.disability" name="disability" id="nodis"
+                          value="no" />
+                        <label class="form-check-label" for="nodis">NO</label>
+                      </div>
+                    </div>
+                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                      <h5 class="mb-0 me-4">DIABETIC: </h5>
+    
+                      <div class="form-check form-check-inline mt-4 mb-0 me-4">
+                        <input class="form-check-input" type="radio" [(ngModel)]="sample.diabetic" name="diabetic" id="yesd"
+                          value="yes" />
+                        <label class="form-check-label" for="yesd">YES</label>
+                      </div>
+    
+                      <div class="form-check form-check-inline mt-4 mb-0 me-4">
+                        <input class="form-check-input" type="radio" [(ngModel)]="sample.diabetic" name="diabetic" id="nod"
+                          value="no" />
+                        <label class="form-check-label" for="nod">NO</label>
+                      </div>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label>ADDRESS</label>
+                      <input type="text" id="form3Example8" placeholder="ENTER YOUR ADDRESS" name="address" [(ngModel)]="sample.address" class="form-control form-control-lg" />
+                    </div>
+                    
+              
+                   
+                    <div class="d-flex justify-content-end pt-3">
+                      <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                      <button type="submit" class="btn btn-success btn-lg ms-2" (click)="update()">SAVE</button>
+                    </div>
+    </form>
+            </div>
+        </div>
+    </div>
+</div>

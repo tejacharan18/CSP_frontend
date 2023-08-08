@@ -1,0 +1,71 @@
+
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-lg-6 col-md-offset-3">
+		<div class="panel panel-success">
+			<div class="panel-heading">Enter Licence Number
+			</div>
+
+			<div class="panel-body">
+				<form  #r="ngForm" class='form-horizontal' >
+					<div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+					<div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+					<div class="form-group">
+						<label for="licence_num">Licence Number</label>
+						<input id="licence_num" name="licence_num" class="form-control" type="text" data-validation="required" [(ngModel)]="User.licence_num">
+						<span id="error_name" class="text-danger"></span>
+					</div>
+                
+                        <input type="submit" value="view" class="btn btn-success my-2" (click)="Read()"><br><br>
+                   
+                      <div class="data" *ngIf="canshow">
+					<div class="form-group">
+						<label for="doct_name">Name</label>
+						<input id="doct_name" name="doct_name" class="form-control" type="text" data-validation="email" [(ngModel)]="User.doct_name">
+						<span id="error_lastname" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="doct_email">Email</label>
+						<input id="doct_email" name="doct_email"  class="form-control" type="email" min="1" [(ngModel)]="User.doct_email" >
+						<span id="error_age" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="doct_ph_num">Phone Number</label>
+						<input type="text" name="doct_ph_num" id="doct_ph_num" class="form-control" [(ngModel)]="User.doct_ph_num">
+						<span id="error_dob" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="doct_age">Age</label>
+						<input type="number" name="doct_age" id="doct_age" class="form-control" [(ngModel)]="this.User.doct_age">
+						<span id="error_dob" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="doct_desgn">Designation</label>
+						<input type="text" name="doct_desgn" id="doct_desgn" class="form-control" [(ngModel)]="User.doct_desgn">
+						<span id="error_dob" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<label for="doct_hosp">Hospital</label>
+						<input id="doct_hosp" name="doct_hosp" class="form-control" type="text" data-validation="required" [(ngModel)]="User.doct_hosp">
+						<span id="error_name" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="doct_exp">Experience (in years)</label>
+						<input id="doct_exp" name="doct_exp" class="form-control" type="text" data-validation="required" [(ngModel)]="User.doct_exp">
+						<span id="error_name" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<label for="doct_hosp">Address</label>
+						<input id="doct_hosp" name="doct_add" class="form-control" type="textarea" data-validation="required" [(ngModel)]="User.doct_add">
+						<span id="error_name" class="text-danger"></span>
+					</div>
+					
+                    <input type="submit" value="Update" class="btn btn-success my-2" (click)="Update()"><br><br>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+

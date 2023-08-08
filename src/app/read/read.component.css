@@ -1,0 +1,25 @@
+td{
+    color:teal;
+}table{
+    margin-left:150px;
+  }
+  td{
+    padding-left: 30px;
+    padding-right: 50px;
+    padding-top: 5px;  
+    padding-bottom: 5px;
+  }
+  th,h4{
+font-size: 25px;
+  }
+  input{
+    width: 70%;
+    margin-left: 100px;
+}
+label{
+    margin-left: 100px;
+    color:teal;
+}
+.panel-body .data{
+    margin-top: 10px;
+}

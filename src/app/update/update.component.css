@@ -1,0 +1,11 @@
+input{
+    width: 70%;
+    margin-left: 100px;
+}
+label{
+    margin-left: 100px;
+    color:teal;
+}
+.panel-body .data{
+    margin-top: 10px;
+}

@@ -1,0 +1,34 @@
+.csp2 img{
+    width:700px;
+    height:400px;
+    margin-left: -180px;
+    margin-top: 30px;
+}
+.col-6 p{
+    font-size:25px;
+    margin-top: 70px;
+}
+.csp1 img{
+    width:700px;
+    height:400px;
+  
+    margin-top: 30px;
+}
+.csp1 .col-6 p{
+    margin-right: 100px;
+}
+.csp3 p{
+    margin-left:400px;
+    font-size:20px;
+}
+.csp-4 p{
+    margin-left:400px;
+    font-size:20px;
+}
+.csp-5 p{
+    margin-left:400px;
+    font-size:20px; 
+}
+.row{
+    margin-top: 40px;
+}

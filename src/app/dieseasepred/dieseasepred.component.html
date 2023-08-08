@@ -1,0 +1,120 @@
+<h2>DIESEASE PREDICTOR</h2>
+<div class="container">
+   <div class="card">
+    <div class="container">
+      <div class="row">
+      <div class="col-5">
+    <h3>Select your symptoms from below</h3>
+    <form>
+      <!-- <input type="text" name="symptom" [(ngModel)]="symp"> -->
+      <!-- <input type="text" id="fruits" list="fruitOptions">
+      <datalist name="symptom" [(ngModel)]="symp">
+        <option value="Apple">
+        <option value="Banana">
+        <option value="Orange">
+        <option value="Mango">
+    </datalist>
+      <button type="submit" (click)="push()">submit</button>
+      <button type="submit" (click)="get()">get disease</button>
+you may have {{c}}       -->
+
+<!-- <div class="search-box">
+  <div class="row">
+    <input type="text" placeholder="Search symptoms"  name="symp" [(ngModel)]="symp" autocomplete="off">
+    <button (click)="push()">add</button>
+  </div>
+  <button (click)="get()">GET</button>
+
+  <div class="result-box">
+    
+  </div>
+</div> -->
+<label class="checkbox-inline">
+     <input type="checkbox" value="fever" name="fever" [(ngModel)]="user.fever">Fever
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="cough" name="cough" [(ngModel)]="user.cough">Cough
+      </label>
+      
+      <label class="checkbox-inline">
+        <input type="checkbox" value="nausea" name="nausea" [(ngModel)]="user.nausea">Nausea
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="eyepain"  name="eyepain"[(ngModel)]="user.eyepain">Eye pain
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="vomting" name="vomting" [(ngModel)]="user.vomting">Vomiting
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="diarrhea" name="diarrhea" [(ngModel)]="user.diarrhea">Diarrhea
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="cold"  name="cold"[(ngModel)]="user.cold">Cold
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="stomachpain" name="stomachpain" [(ngModel)]="user.stomachpain">Stomach pain
+      </label>
+      
+      <label class="checkbox-inline">
+        <input type="checkbox" value="head ache" name="head ache" [(ngModel)]="user.headache">Head ache
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="hoarsevoice" name="hoarsevoice" [(ngModel)]="user.hoarsevoice">Hoarse Voice
+      </label>
+      
+      <label class="checkbox-inline">
+        <input type="checkbox" value="puffyface" name="puffyface" [(ngModel)]="user.puffyface">Puffy face
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="dryskin" name="dryskin" [(ngModel)]="user.dryskin">Dry Skin
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="weightgain" name="weight gain" [(ngModel)]="user.weightgain">weight gain
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="musclepain"  name="musclepain"[(ngModel)]="user.musclepain">Muscle pain
+      </label><label class="checkbox-inline">
+        <input type="checkbox" value="rash"  name="rash" [(ngModel)]="user.rash">Rash
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="tiredness"  name="tiredness"[(ngModel)]="user.tiredness">Tiredness
+      </label>
+      
+      <label class="checkbox-inline">
+        <input type="checkbox" value="fatigue" name="fatigue" [(ngModel)]="user.fatigue">Fatigue
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="weakness" name="weakness" [(ngModel)]="user.weakness">Weakness
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="constipation" name="constipation" [(ngModel)]="user.constipation">Constipation
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" value="sweating" name="sweating" [(ngModel)]="user.sweating">Sweating
+      </label>
+    </form>
+    </div>
+    <div class="col-7">
+  <img src="assets\images\health.png">
+</div></div>
+<button class="submit" value="submit" type="submit" (click)="get()">Submit</button>
+</div>
+  </div>
+  </div>
+
+  <div *ngIf="predict"> 
+    <div class="wrapper">   
+                <div class="overlay" *ngIf="show1">
+                  
+                      <div class="content" (click)="closeoverlay($event)">
+                          <div class="close" (click)="closepopup()">
+                              &times;
+                          </div>
+                         <h4>{{c}}</h4>
+                          <div class="confirm">
+                          <button class="confirm btn btn-danger" routerLink="patient"   (click)="pop()">Ok</button>
+                          </div>
+                     
+                  </div>
+              </div>
+          </div>

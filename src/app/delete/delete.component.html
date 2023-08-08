@@ -1,0 +1,41 @@
+
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-lg-6 col-md-offset-3">
+    <div class="panel panel-success">
+      <div class="panel-heading">Enter Your Details Here
+      </div>
+      <div class="panel-body">
+        <form  #r="ngForm" class='form-horizontal'>
+          <div class="form-group">
+            <label for="licence_num">Licence Number</label>
+            <input id="licence_num" name="licence_num" class="form-control" type="text" data-validation="required" [(ngModel)]="User.licence_num">
+            <span id="error_name" class="text-danger"></span>
+          </div>
+          <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+          <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+                    <input type="submit" value="Delete" class="btn btn-danger my-2" (click)="popup()"><br><br>
+      
+        </form>
+  
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  <div *ngIf="canshow">
+    <div class="wrapper">   
+                  <div class="overlay" *ngIf="show">
+                      <div class="content" (click)="closeoverlay($event)">
+                          <div class="close" (click)="closepopup()">
+                              &times;
+                          </div>
+                          <p>Are you sure to Delete your account ?</p>
+                          <div class="confirm">
+                          <button class="confirm btn btn-danger "type="submit" (click)="Delete()">yes</button>
+                          <button class="confirm btn btn-primary " (click)=" closepopup()">No</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
